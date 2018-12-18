@@ -1,0 +1,85 @@
+.container {
+	display: grid;
+	grid-template-columns:  1fr 2fr 2fr;
+	grid-template-rows: 1fr 2fr 3fr;
+	grid-template-areas: 
+	"leftnav header header"
+	"leftnav graphs graphs"
+	"leftnav bottom footer"
+}
+/*===========Header Section===========*/
+header {
+	background-color: red;
+	grid-area: header;
+}
+
+.search {
+	display: flex;
+
+}
+
+.search-input {
+	padding: 20px;
+	padding-right: 30%;
+	border: 2px solid lightgray;
+}
+
+.search-icon {
+	padding: 10px 3% 10px 3%;
+	border: 2px solid lightgray;
+}
+/*==========Left Nav Section==========*/
+.left-nav {
+	background-color: cyan;
+	grid-area: leftnav;
+}
+
+.profile-img {
+	height: 75px;
+	border-radius: 100%;
+}
+
+.check-please {
+	
+}
+
+input[type="checkbox"]{
+	visibility: hidden;
+}
+
+label{
+	cursor: pointer;
+}
+
+input[type="checkbox"] + label:before{
+	border: 1px solid #333;
+	content: " ";
+	display: inline-block;
+	height: 16px;
+	padding: 0;
+	vertical-align: top;
+	width: 16px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background: yellow;
+  color: #333;
+  content: "\2713";
+  text-align: center;
+}
+
+/*===========Graphs Section===========*/
+.graphs {
+	background-color: green;
+	grid-area: graphs;
+}
+/*===========Bottom Section===========*/
+.bottom {
+	background-color: magenta;
+	grid-area: bottom;
+}
+/*==========Footer Section============*/
+footer {
+	background-color: yellow;
+	grid-area: footer;
+}
