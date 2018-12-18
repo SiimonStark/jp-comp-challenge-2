@@ -7,6 +7,7 @@
 	"leftnav graphs graphs"
 	"leftnav bottom footer"
 }
+
 /*===========Header Section===========*/
 header {
 	background-color: red;
@@ -14,21 +15,75 @@ header {
 }
 
 .search {
-	display: flex;
-
+	border-bottom: 2px solid lightgray;
+	display: grid;
+	grid-template-columns:  50px 4fr 50px 50px 50px;
+	grid-template-rows: 50px;
+	grid-template-areas: 
+	"menu search user cal apps";
+}
+#menu {
+	grid-area: menu;
 }
 
 .search-input {
-	padding: 20px;
-	padding-right: 30%;
-	border: 2px solid lightgray;
+	border-right: 2px solid lightgray;
+	grid-area: search;
+}
+
+#add-user {
+	grid-area: user;
+}
+
+#add-cal {
+	grid-area: cal;
+}
+
+#apps {
+	grid-area: apps;
 }
 
 .search-icon {
-	padding: 10px 3% 10px 3%;
-	border: 2px solid lightgray;
+	padding: 15px;
+	border-right: 2px solid lightgray;
+}
+
+.mid-head {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.head-text {
+	margin-left: 5%;
+}
+
+.location {
+	margin-top: -10px;
+}
+
+.buttons {
+	margin-right: 5%;
+}
+
+.tabs {
+	overflow: scroll;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.tab--text {
+	margin-left: 5%;
+	font-size: 70%;
 }
 /*==========Left Nav Section==========*/
+
+ul {
+	list-style: none;
+}
+
 .left-nav {
 	background-color: cyan;
 	grid-area: leftnav;
