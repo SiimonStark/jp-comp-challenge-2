@@ -18,7 +18,7 @@ header {
 	border-bottom: 2px solid lightgray;
 	display: grid;
 	grid-template-columns:  50px 4fr 50px 50px 50px;
-	grid-template-rows: 50px;
+	grid-auto-rows: 50px;
 	grid-template-areas: 
 	"menu search user cal apps";
 }
@@ -46,6 +46,7 @@ header {
 .search-icon {
 	padding: 15px;
 	border-right: 2px solid lightgray;
+	cursor: pointer;
 }
 
 .mid-head {
@@ -79,14 +80,51 @@ header {
 	font-size: 70%;
 }
 /*==========Left Nav Section==========*/
-
-ul {
-	list-style: none;
-}
-
 .left-nav {
 	background-color: cyan;
 	grid-area: leftnav;
+	display: flex;
+	flex-direction: column;
+	color: #98a3b5;
+}
+
+ul {
+	list-style: none;
+	color: #576577;
+	padding-left: 10px;
+}
+
+li {
+	color: #98a3b5;
+}
+
+.nav-i {
+	display: inline-block;
+
+	padding-right: 10px;
+}
+
+.profile {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid black;
+}
+
+h4 {
+}
+
+.main {
+	/*height: 200px;*/
+}
+
+.admin {
+
+}
+
+.categories {
+
 }
 
 .profile-img {
@@ -102,7 +140,7 @@ input[type="checkbox"]{
 	visibility: hidden;
 }
 
-label{
+.click{
 	cursor: pointer;
 }
 

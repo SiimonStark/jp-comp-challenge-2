@@ -3,6 +3,7 @@
 <head>
 	<title>JP-Static-Comp-2</title>
 	<meta name="viewport" content= "width= device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -42,13 +43,13 @@
 				</section>
 			</section>
 			<section class="tabs">
-				<p class="tab--text">SUMMARY</p>
-				<p class="tab--text">APPLICATIONS</p>
-				<p class="tab--text">JOB BOARD</p>
-				<p class="tab--text">INTERVIEWS</p>
-				<p class="tab--text">ACTIVITY</p>
-				<p class="tab--text">BROADCAST</p>
-				<p class="tab--text">NOTIFICATIONS</p>
+				<p class="tab--text click">SUMMARY</p>
+				<p class="tab--text click">APPLICATIONS</p>
+				<p class="tab--text click">JOB BOARD</p>
+				<p class="tab--text click">INTERVIEWS</p>
+				<p class="tab--text click">ACTIVITY</p>
+				<p class="tab--text click">BROADCAST</p>
+				<p class="tab--text click">NOTIFICATIONS</p>
 			</section>
 		</header>
 		<aside class="left-nav">
@@ -59,71 +60,72 @@
 				</h4>
 			</section>
 			<section class="main">
-				<ul>Main
-					<li>
-						<i class="fas fa-home"></i>
+				Main
+					<li class="click">
+						<i class="nav-i fas fa-home"></i>
 						HOME
 					</li>
-					<li>
-						<i class="fas fa-briefcase"></i>
+					<li class="click">
+						<i class="nav-i fas fa-briefcase"></i>
 						JOBS
 					</li>
-					<li>
-						<i class="fas fa-file-alt"></i>
+					<li class="click">
+						<i class="nav-i fas fa-file-alt"></i>
 						RESUMES
 					</li>
-					<li>
-						<i class="fas fa-clipboard-list"></i>
+					<li class="click">
+						<i class="nav-i fas fa-clipboard-list"></i>
 						TASKS
 					</li>
-					<li>
-						<i class="fas fa-calendar-alt"></i>
+					<li class="click">
+						<i class="nav-i fas fa-calendar-alt"></i>
 						CALENDAR
 					</li>
 				</ul>
 			</section>
 			<section class="admin">
-				<ul>ADMIN
-					<li>
-						<i class="fas fa-user-friends"></i>
+				<ul>Admin
+					<li class="click">
+						<i class="nav-i fas fa-user-friends"></i>
 						USERS
 					</li>
-					<li>
-						<i class="fas fa-map-marker-alt"></i>
+					<li class="click">
+						<i class="nav-i fas fa-map-marker-alt"></i>
 						LOCATIONS
 					</li>
-					<li>
-						<i class="fas fa-network-wired"></i>
+					<li class="click">
+						<i class="nav-i fas fa-network-wired"></i>
 						WORKFLOWS
 					</li>
-					<li>
-						<i class="far fa-newspaper"></i>
+					<li class="click">
+						<i class="nav-i far fa-newspaper"></i>
 						JOB BOARDS
 					</li>
-					<li>
-						<i class="fas fa-comments"></i>
+					<li class="click">
+						<i class="nav-i fas fa-comments"></i>
 						SOCIAL
 					</li>
 				</ul>
 			</section>
 			<section class="Categories">
-				Categories
-				<div class="check-please">
-					<input type="checkbox" value="None" id="box-yellow" name="check" checked />
-					<label for="box-yellow">Administrative</label>
-					<div class="check-please">
+				<ul>Categories
+					<li><div class="check-please">
+						<input type="checkbox" value="None" id="box-yellow" name="check" checked />
+						<label for="box-yellow">Administrative</label>
+					</div></li>
+					<li><div class="check-please">
 						<input type="checkbox" value="None" id="box-blue" name="check" checked />
 						<label for="box-blue">Design</label>
-					</div>
-					<div class="check-please">
+					</div></li>
+					<li><div class="check-please">
 						<input type="checkbox" value="None" id="box-red" name="check" checked />
 						<label for="box-red">Executive</label>
-					</div>
-					<div class="check-please">
+					</div></li>
+					<li><div class="check-please">
 						<input type="checkbox" value="None" id="box-green" name="check" checked />
 						<label for="box-green">Human Resources</label>
-					</div>
-				</div>
+					</div></li>
+				</ul>
 			</section>
 		</aside>
 		<section class="graphs">
