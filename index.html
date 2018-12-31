@@ -5,228 +5,260 @@
 	<meta name="viewport" content= "width= device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 	<div class="container">
 		<header>
 			<section class="search">
-				<i id="menu" class="search-icon fas fa-bars"></i>
-				<input class="search-input" type="search" value="Search for a job, task or resume"></input>
-				<i id="add-user" class="search-icon fas fa-user-plus"></i>
-				<i id="add-cal" class="search-icon fas fa-calendar-plus"></i>
-				<i id="apps" class="search-icon fas fa-th"></i>
+				<span class="open-slide">
+					<a href="#" onclick="openSlideMenu()">
+						<svg width="30" height="30">
+							<path d="M0,5 30,5" stroke="#9da6ae" stroke-width="5"/>
+							<path d="M0,14 30,14" stroke="#9da6ae" stroke-width="5"/>
+							<path d="M0,23 30,23" stroke="#9da6ae" stroke-width="5"/>
+						</svg>
+					</a>
+				</span>
+				<!-- =========Hamburger============ -->
+				<div id="side-menu" class="side-nav">
+					<aside id="menu" class="left-nav">
+						<section class="profile">
+							<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+							<img class="profile-img" src="resources/static-comp-image.jpg">
+							<h4>Mr. Dismal
+								<i class="fas fa-angle-down"></i>
+							</h4>
+						</section>
+						<section class="main">
+							Main
+							<li class="click">
+								<i class="nav-i fas fa-home"></i>
+								HOME
+							</li>
+							<li class="click">
+								<i class="nav-i fas fa-briefcase"></i>
+								JOBS
+							</li>
+							<li class="click">
+								<i class="nav-i fas fa-file-alt"></i>
+								RESUMES
+							</li>
+							<li class="click">
+								<i class="nav-i fas fa-clipboard-list"></i>
+								TASKS
+							</li>
+							<li class="click">
+								<i class="nav-i fas fa-calendar-alt"></i>
+								CALENDAR
+							</li>
+						</ul>
+					</section>
+					<section class="admin">
+						<ul>Admin
+							<li class="click">
+								<i class="nav-i fas fa-user-friends"></i>
+								USERS
+							</li>
+							<li class="click">
+								<i class="nav-i fas fa-map-marker-alt"></i>
+								LOCATIONS
+							</li>
+							<li class="click">
+								<i class="nav-i fas fa-network-wired"></i>
+								WORKFLOWS
+							</li>
+							<li class="click">
+								<i class="nav-i far fa-newspaper"></i>
+								JOB BOARDS
+							</li>
+							<li class="click">
+								<i class="nav-i fas fa-comments"></i>
+								SOCIAL
+							</li>
+						</ul>
+					</section>
+					<section class="Categories">
+						<ul>Categories
+							<li><div class="check-please">
+								<input type="checkbox" value="None" id="box-yellow" name="check" checked />
+								<label for="box-yellow">Administrative</label>
+							</div></li>
+							<li><div class="check-please">
+								<input type="checkbox" value="None" id="box-blue" name="check" checked />
+								<label for="box-blue">Design</label>
+							</div></li>
+							<li><div class="check-please">
+								<input type="checkbox" value="None" id="box-red" name="check" checked />
+								<label for="box-red">Executive</label>
+							</div></li>
+							<li><div class="check-please">
+								<input type="checkbox" value="None" id="box-green" name="check" checked />
+								<label for="box-green">Human Resources</label>
+							</div></li>
+						</ul>
+					</section>
+				</aside>
+				<!--  -->
+			</div>
+
+			<!-- ===================== -->
+			<i id="glass" class="search-icon fas fa-search"></i>
+			<input class="search-input" type="search" value="Search for a job, task or resume"></input>
+			<i id="add-user" class="search-icon fas fa-user-plus"></i>
+			<i id="add-cal" class="search-icon fas fa-calendar-plus"></i>
+			<i id="apps" class="search-icon fas fa-th"></i>
+		</section>
+		<section class="mid-head">
+			<article class="head-text">
+				<h1>Customer Service Representative</h1>
+				<p class="location">
+					<i class="fas fa-map-marker-alt"></i>
+					San Francisco, CA - 
+					<a href="">Preview this post</a>
+				</p>
+			</article>
+			<section class="buttons">
+				<button class="open" onclick="turnGreen()">
+					<i id="open-green" class="fas fa-circle"></i>
+					OPEN
+				</button>
+				<button class="btn-circle">
+					<i class="btn-icon fas fa-bookmark"></i>
+				</button>
+				<button class="btn-circle">
+					<i class="btn-icon fas fa-pen"></i>
+				</button>
+				<button class="btn-circle">
+					<i class="btn-icon fas fa-trash-alt"></i>
+				</button>
 			</section>
-			<section class="mid-head">
-				<article class="head-text">
-					<h1>Customer Service Representative</h1>
-					<p class="location">
-						<i class="fas fa-map-marker-alt"></i>
-						San Francisco, CA - 
-						<a href="">Preview this post</a>
-					</p>
-				</article>
-				<section class="buttons">
-					<button class="open">
-						<i class="fas fa-circle"></i>
-						OPEN
-					</button>
-					<button class="bookmark">
-						<i class="fas fa-bookmark"></i>
-					</button>
-					<button class="edit">
-						<i class="fas fa-pen"></i>
-					</button>
-					<button>
-						<i class="fas fa-trash-alt"></i>
-					</button>
-				</section>
-			</section>
-			<section class="tabs">
-				<p class="tab--text click">SUMMARY</p>
-				<p class="tab--text click">APPLICATIONS</p>
-				<p class="tab--text click">JOB BOARD</p>
-				<p class="tab--text click">INTERVIEWS</p>
-				<p class="tab--text click">ACTIVITY</p>
-				<p class="tab--text click">BROADCAST</p>
-				<p class="tab--text click">NOTIFICATIONS</p>
-			</section>
-		</header>
-		<aside class="left-nav">
-			<section class="profile">
-				<img class="profile-img" src="resources/static-comp-image.jpg">
-				<h4>Mr. Dismal
-					<i class="fas fa-angle-down"></i>
-				</h4>
-			</section>
-			<section class="main">
-				Main
-					<li class="click">
-						<i class="nav-i fas fa-home"></i>
-						HOME
-					</li>
-					<li class="click">
-						<i class="nav-i fas fa-briefcase"></i>
-						JOBS
-					</li>
-					<li class="click">
-						<i class="nav-i fas fa-file-alt"></i>
-						RESUMES
-					</li>
-					<li class="click">
-						<i class="nav-i fas fa-clipboard-list"></i>
-						TASKS
-					</li>
-					<li class="click">
-						<i class="nav-i fas fa-calendar-alt"></i>
-						CALENDAR
-					</li>
-				</ul>
-			</section>
-			<section class="admin">
-				<ul>Admin
-					<li class="click">
-						<i class="nav-i fas fa-user-friends"></i>
-						USERS
-					</li>
-					<li class="click">
-						<i class="nav-i fas fa-map-marker-alt"></i>
-						LOCATIONS
-					</li>
-					<li class="click">
-						<i class="nav-i fas fa-network-wired"></i>
-						WORKFLOWS
-					</li>
-					<li class="click">
-						<i class="nav-i far fa-newspaper"></i>
-						JOB BOARDS
-					</li>
-					<li class="click">
-						<i class="nav-i fas fa-comments"></i>
-						SOCIAL
-					</li>
-				</ul>
-			</section>
-			<section class="Categories">
-				<ul>Categories
-					<li><div class="check-please">
-						<input type="checkbox" value="None" id="box-yellow" name="check" checked />
-						<label for="box-yellow">Administrative</label>
-					</div></li>
-					<li><div class="check-please">
-						<input type="checkbox" value="None" id="box-blue" name="check" checked />
-						<label for="box-blue">Design</label>
-					</div></li>
-					<li><div class="check-please">
-						<input type="checkbox" value="None" id="box-red" name="check" checked />
-						<label for="box-red">Executive</label>
-					</div></li>
-					<li><div class="check-please">
-						<input type="checkbox" value="None" id="box-green" name="check" checked />
-						<label for="box-green">Human Resources</label>
-					</div></li>
-				</ul>
-			</section>
+		</section>
+		<section class="tabs">
+			<p class="tab--text click">SUMMARY</p>
+			<p class="tab--text click">APPLICATIONS</p>
+			<p class="tab--text click">JOB BOARD</p>
+			<p class="tab--text click">INTERVIEWS</p>
+			<p class="tab--text click">ACTIVITY</p>
+			<p class="tab--text click">BROADCAST</p>
+			<p class="tab--text click">NOTIFICATIONS</p>
+		</section>
+	</header>
+	<section class="graphs">
+		<article class="circle">
+			<div class="graph-container">
+				<img id="bar-graph" src="imgs/bar-graph.png">
+				<button class="graph-button">TOTALS - Out of 5,231 views</button>
+			</div>
+		</article>
+
+		<article class="bars">
+			<div class="graph-container">
+				<img id="bar-graph" src="imgs/bar-graph.png">
+				<button class="graph-button">APPLICANTS/DAYS</button>
+			</div>
+		</article>
+		<!-- === LINE with Arrow ===== -->
+		<div class="line-container">
+			<div class="line-with-caret">
+				<span class="outer-line"></span>
+				<button class="line-up"><span class="fas fa-caret-up" aria-hidden="true"></span></button>
+				<span class="outer-line"></span>
+			</div>
+		</div>
+		<!-- ========================= -->
+	</section>
+	<section class="bottom">
+		<div class="pseudo-table">
+			<div class="t-head">
+				<p class="t-title">JOB DESCRIPTION</p>
+				<button class="t-btn">EDIT</button>
+			</div>
+			<div class="r-1">
+				<p class="t-name">POSITION TITLE</p>
+				<p class="t-detail">Customer Service Representative</p>
+			</div>
+			<div class="r-2">
+				<p class="t-name">LOCATION</p>
+				<p class="t-detail">San Francisco, CA</p>
+			</div>
+			<div class="r-3">
+				<p class="t-name">EMPLOYMENT TYPE</p>
+				<p class="t-detail">Full-time</p>
+			</div>
+			<div class="r-4">
+				<p class="t-name">EXPERIENCE</p>
+				<p class="t-detail">Mid-level</p>
+			</div>
+			<div class="r-5">
+				<p class="t-name">STATUS</p>
+				<p class="t-detail">Open</p>
+			</div>
+			<div class="r-6">
+				<p class="t-name">DESCRIPTION</p>
+				<p class="t-detail">The Customer Service Representative is responsible for interacting with and providing quality assistance to all radical customers, responsible for keeping up-to-date on the various product shizzle; helping the bidness reduce customer service wait times while doing a backhand spring and eating a ham sandwich</p>
+			</div>
+			<div class="r-7">
+				<p class="t-name">HIRING LEAD</p>
+				<p class="t-detail">
+					<img src="">
+					Tom Tizzy
+				</p>
+			</div>
+			<div class="r-8">
+				<p class="t-name">APPROVED SALARY</p>
+				<p class="t-detail">$58,000k</p>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<aside class="social">
+			<div class="button-container">
+				<button>
+					<i class="fab fa-facebook"></i>
+					Post to Facebook
+				</button>
+				<button>
+					<i class="fab fa-twitter"></i>
+					Tweet this Job
+				</button>
+				<button>
+					<i class="fab fa-linkedin"></i>
+					Post to Linkedin
+				</button>
+			</div>
+			<article class="links-x3">
+				<i class="fas fa-globe-americas"></i>
+				<h2>Link to this Job</h2>
+				<p class="social-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				</p>
+				<input class="link-box" type="url" name="" value="https://radicalnonsensical.website..">
+				<button class="copy">Copy</button>
+			</article>
+			<article class="links-x3">
+				<h2>
+					<i class="fas fa-laptop-code"></i>
+					Use the Button Widget
+				</h2>
+				<p class="social-txt">This widget embeds the buttons on your website</p>
+				<p class="link-box"><.script type="test/javascript"s...</p>
+				<button class="copy">Copy</button>
+			</article>
+			<article class="links-x3">
+				<h2>
+					<i class="fas fa-paper-plane"></i>
+					Upload Resumes by Email
+				</h2>
+				<p class="social-txt">You can automatically upload multiple resumes to this job by emailing the address below.</p>
+				<a href="mailto:tomtizzy@gmail.com">
+				tomtizzy@gmail.com</a>
+				<button class="copy">Copy</button>
+			</article>
+
 		</aside>
-		<section class="graphs">
-			Graphs
-			<article class="circle">
-
-			</article>
-			<article class="bars">
-
-			</article>
-		</section>
-		<section class="bottom">
-			<table>
-				<tr>
-					<th>JOB DESCRIPTION
-						<button>EDIT</button>
-					</th>
-				</tr>
-				<tr>
-					<td class="t-name">POSITION TITLE</td>
-					<td class="t-detail">Customer Service Representative</td>
-				</tr>
-				<tr>
-					<td class="t-name">LOCATION</td>
-					<td class="t-detail">San Francisco, CA</td>
-				</tr>
-				<tr>
-					<td class="t-name">EMPLOYMENT TYPE</td>
-					<td class="t-detail">Full-time</td>
-				</tr>
-				<tr>
-					<td class="t-name">EXPERIENCE</td>
-					<td class="t-detail">Mid-level</td>
-				</tr>
-				<tr>
-					<td class="t-name">STATUS</td>
-					<td class="t-detail">Open</td>
-				</tr>
-				<tr>
-					<td class="t-name">DESCRIPTION</td>
-					<td class="t-detail">The Customer Service Representative is responsible for interacting with and providing quality assistance to all radical customers, responsible for keeping up-to-date on the various product shizzle; helping the bidness reduce customer service wait times while doing a backhand spring and eating a ham sandwich</td>
-				</tr>
-				<tr>
-					<td class="t-name">HIRING LEAD</td>
-					<td class="t-detail">
-						<img src="">
-						Tom Tizzy
-					</td>
-				</tr>
-				<tr>
-					<td class="t-name">APPROVED SALARY</td>
-					<td class="t-detail">$58,000k</td>
-				</tr>
-			</table>
-		</section>
-		<footer>
-			<aside class="social">
-				<div class="button-container">
-					<button>
-						<i class="fab fa-facebook"></i>
-						Post to Facebook
-					</button>
-					<button>
-						<i class="fab fa-twitter"></i>
-						Tweet this Job
-					</button>
-					<button>
-						<i class="fab fa-linkedin"></i>
-						Post to Linkedin
-					</button>
-				</div>
-				<article class="links-x3">
-					<i class="fas fa-globe-americas"></i>
-					<h2>Link to this Job</h2>
-					<p class="social-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					</p>
-					<input class="link-box" type="url" name="" value="https://radicalnonsensical.website..">
-					<button class="copy">Copy</button>
-				</article>
-				<article class="links-x3">
-					<h2>
-						<i class="fas fa-laptop-code"></i>
-						Use the Button Widget
-					</h2>
-					<p class="social-txt">This widget embeds the buttons on your website</p>
-					<p class="link-box"><.script type="test/javascript"s...</p>
-					<button class="copy">Copy</button>
-				</article>
-				<article class="links-x3">
-					<h2>
-						<i class="fas fa-paper-plane"></i>
-						Upload Resumes by Email
-					</h2>
-					<p class="social-txt">You can automatically upload multiple resumes to this job by emailing the address below.</p>
-					<a href="mailto:tomtizzy@gmail.com">
-					tomtizzy@gmail.com</a>
-					<button class="copy">Copy</button>
-				</article>
-
-			</aside>
-		</footer>
-	</div>
+	</footer>
+</div>
+<script src="scripts.js"></script>
 </body>
 </html>
