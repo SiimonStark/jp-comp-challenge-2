@@ -5,7 +5,7 @@
 .container {
 	display: grid;
 	grid-template-columns:  1fr 1fr 1fr;
-	grid-template-rows: 1fr 2fr 3fr;
+	grid-auto-rows: auto;
 	grid-template-areas: 
 	"header header header"
 	"graphs graphs graphs"
@@ -67,7 +67,17 @@ header {
 	background-color: #00a4ff;
 }
 
+.header-bottom {
+	display: grid;
+	grid-auto-columns: auto;
+	grid-auto-rows: auto;
+	grid-template-areas: 
+	"Big-txt Buttons"
+	"tabs tabs";
+}
+
 .mid-head {
+	grid-area: Big-txt;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -83,7 +93,11 @@ header {
 }
 
 .buttons {
+	grid-area: Buttons;
 	margin-right: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .open {
@@ -91,6 +105,8 @@ header {
 	background-color: #fefefe;
 	color: #9b9fab;
 	border-radius: 100px;
+	overflow: none;
+	font-size: 1vw;
 }
 
 .btn-circle {
@@ -98,15 +114,18 @@ header {
 	border-color: #e8e8ea;
 }
 
+
 .btn-icon {
 	color: #9b9fab;
 }
 
 .tabs {
+	grid-area: tabs;
 	overflow: scroll;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: flex-end;
+	
 }
 
 .tab--text {
@@ -308,30 +327,47 @@ span, .line-up {
 	grid-area: bottom;
 }
 
-.pseudo-table {
+table {
+	border-collapse: collapse;
 	margin: 30px;
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	grid-auto-rows: 25px;
-	grid-template-areas: 
-	"t-head t-head"
-	"r-1 r-1"
-	"r-2 r-2"
-	"r-3 r-3"
-	"r-4 r-4"
-	"r-5 r-5"
-	"r-6 r-6"
-	"r-7 r-7"
-	"r-8 r-8";
-}
-
-.t-head {
-	background-color: #6a7e97;
-	color: white;
 }
 
 .t-title {
+	background-color: #6a7e97;
+	text-align: left;
+	padding: 20px;
+}
 
+.t-header {
+	margin: 0;
+	display: inline-block;
+	color: #d5e0e8;
+	padding: 10px;
+}
+
+.t-edit {
+	background-color: #7a8ca8;
+	color: white;
+	border: 0;
+	padding: 10px;
+}
+
+.t-name,
+.t-detail,
+.t-hr {
+	background-color: white;
+	padding: 10px 20px;
+	vertical-align: center;
+}
+
+.t-name {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.t-img {
+	border-radius: 100%;
+	width: 50px;
 }
 /*==========Footer Section============*/
 footer {
