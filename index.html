@@ -110,40 +110,42 @@
 			<i id="add-cal" class="search-icon fas fa-calendar-plus"></i>
 			<i id="apps" class="search-icon fas fa-th"></i>
 		</section>
-		<section class="mid-head">
-			<article class="head-text">
-				<h1>Customer Service Representative</h1>
-				<p class="location">
-					<i class="fas fa-map-marker-alt"></i>
-					San Francisco, CA - 
-					<a href="">Preview this post</a>
-				</p>
-			</article>
-			<section class="buttons">
-				<button class="open" onclick="turnGreen()">
-					<i id="open-green" class="fas fa-circle"></i>
-					OPEN
-				</button>
-				<button class="btn-circle">
-					<i class="btn-icon fas fa-bookmark"></i>
-				</button>
-				<button class="btn-circle">
-					<i class="btn-icon fas fa-pen"></i>
-				</button>
-				<button class="btn-circle">
-					<i class="btn-icon fas fa-trash-alt"></i>
-				</button>
+		<div class="header-bottom">
+			<section class="mid-head">
+				<article class="head-text">
+					<h1>Customer Service Representative</h1>
+					<p class="location">
+						<i class="fas fa-map-marker-alt"></i>
+						San Francisco, CA - 
+						<a href="">Preview this post</a>
+					</p>
+				</article>
 			</section>
-		</section>
-		<section class="tabs">
-			<p class="tab--text click">SUMMARY</p>
-			<p class="tab--text click">APPLICATIONS</p>
-			<p class="tab--text click">JOB BOARD</p>
-			<p class="tab--text click">INTERVIEWS</p>
-			<p class="tab--text click">ACTIVITY</p>
-			<p class="tab--text click">BROADCAST</p>
-			<p class="tab--text click">NOTIFICATIONS</p>
-		</section>
+				<section class="buttons">
+					<button class="open" onclick="turnGreen()">
+						<i id="open-green" class="fas fa-circle"></i>
+						<span id="txt-open">OPEN</span>
+					</button>
+					<button class="btn-circle">
+						<i class="btn-icon fas fa-bookmark"></i>
+					</button>
+					<button class="btn-circle">
+						<i class="btn-icon fas fa-pen"></i>
+					</button>
+					<button class="btn-circle">
+						<i class="btn-icon fas fa-trash-alt"></i>
+					</button>
+				</section>
+			<section class="tabs">
+				<p class="tab--text click">SUMMARY</p>
+				<p class="tab--text click">APPLICATIONS</p>
+				<p class="tab--text click">JOB BOARD</p>
+				<p class="tab--text click">INTERVIEWS</p>
+				<p class="tab--text click">ACTIVITY</p>
+				<p class="tab--text click">BROADCAST</p>
+				<p class="tab--text click">NOTIFICATIONS</p>
+			</section>
+		</div>
 	</header>
 	<section class="graphs">
 		<article class="circle">
@@ -170,47 +172,92 @@
 		<!-- ========================= -->
 	</section>
 	<section class="bottom">
-		<div class="pseudo-table">
-			<div class="t-head">
-				<p class="t-title">JOB DESCRIPTION</p>
-				<button class="t-btn">EDIT</button>
-			</div>
-			<div class="r-1">
-				<p class="t-name">POSITION TITLE</p>
-				<p class="t-detail">Customer Service Representative</p>
-			</div>
-			<div class="r-2">
-				<p class="t-name">LOCATION</p>
-				<p class="t-detail">San Francisco, CA</p>
-			</div>
-			<div class="r-3">
-				<p class="t-name">EMPLOYMENT TYPE</p>
-				<p class="t-detail">Full-time</p>
-			</div>
-			<div class="r-4">
-				<p class="t-name">EXPERIENCE</p>
-				<p class="t-detail">Mid-level</p>
-			</div>
-			<div class="r-5">
-				<p class="t-name">STATUS</p>
-				<p class="t-detail">Open</p>
-			</div>
-			<div class="r-6">
-				<p class="t-name">DESCRIPTION</p>
-				<p class="t-detail">The Customer Service Representative is responsible for interacting with and providing quality assistance to all radical customers, responsible for keeping up-to-date on the various product shizzle; helping the bidness reduce customer service wait times while doing a backhand spring and eating a ham sandwich</p>
-			</div>
-			<div class="r-7">
-				<p class="t-name">HIRING LEAD</p>
-				<p class="t-detail">
-					<img src="">
+		<table>
+			<tr>
+				<th class="t-title" colspan="2">
+					<h5 class="t-header">JOB DESCRIPTION</h5>
+					<button class="t-edit">
+						<i class="fas fa-pencil-alt"></i>
+						EDIT
+					</button>
+				</th>
+			</tr>
+			<tr>
+				<th class="t-name">POSITION TITLE</th>
+				<td class="t-detail">Customer Service Representative</td>
+			</tr>
+			<tr>
+				<td class="t-hr" colspan="2">
+					<hr class="t-line">
+				</td>
+			</tr>
+			<tr>
+				<th class="t-name">LOCATION</th>
+				<td class="t-detail">San Francisco, CA</td>
+			</tr>
+			<tr>
+				<td class="t-hr" colspan="2">
+					<hr class="t-line">
+				</td>
+			</tr>
+			<tr>
+				<th class="t-name">EMPLOYMENT TYPE</th>
+				<td class="t-detail">Full-time</td>
+			</tr>
+			<tr>
+				<td class="t-hr" colspan="2">
+					<hr class="t-line">
+				</td>
+			</tr>
+			<tr>
+				<th class="t-name">EXPERIENCE</th>
+				<td class="t-detail">Mid-level</td>
+			</tr>
+			<tr>
+				<td class="t-hr" colspan="2">
+					<hr class="t-line">
+				</td>
+			</tr>
+			<tr>
+				<th class="t-name">STATUS</th>
+				<td class="t-detail">Open</td>
+			</tr>
+			<tr>
+				<td class="t-hr" colspan="2">
+					<hr class="t-line">
+				</td>
+			</tr>
+			<tr>
+				<th class="t-name">DESCRIPTION</th>
+				<td class="t-detail">The Customer Service Representative is responsible for interacting with and providing quality assistance to all radical customers, responsible for keeping up-to-date on the various product shizzle; helping the bidness reduce customer service wait times while doing a backhand spring and eating a ham sandwich</td>
+			</tr>
+			<tr>
+				<td class="t-hr" colspan="2">
+					<hr class="t-line">
+				</td>
+			</tr>
+			<tr>
+				<th class="t-name">HIRING LEAD</th>
+				<td class="t-detail">
+					<img class="t-img" src="resources/static-comp-image.jpg">
 					Tom Tizzy
-				</p>
-			</div>
-			<div class="r-8">
-				<p class="t-name">APPROVED SALARY</p>
-				<p class="t-detail">$58,000k</p>
-			</div>
-		</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="t-hr" colspan="2">
+					<hr class="t-line">
+				</td>
+			</tr>
+			<tr>
+				<th class="t-name">APPROVED SALARY</th>
+				<td class="t-detail">$58,000k</td>
+			</tr>
+			<tr>
+				<td class="t-hr" colspan="2">
+					<hr class="t-line">
+				</td>
+			</tr>
+		</table>
 	</section>
 	<footer>
 		<aside class="social">

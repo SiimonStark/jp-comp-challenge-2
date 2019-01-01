@@ -10,5 +10,8 @@ function closeSlideMenu() {
 }
 
 function turnGreen() {
-	document.getElementById('open-green').style.color = '#75cb21';
+	var open = document.getElementById('open-green').style.color = '#75cb21';
+	if (open === clicked()) {
+		console.log('almost working');
+	}
 }
