@@ -85,11 +85,12 @@ header {
 }
 
 .head-text {
-	margin-left: 5%;
+	margin-left: 30px;
 }
 
 .location {
 	margin-top: -10px;
+	font-weight: 400;
 }
 
 .buttons {
@@ -97,7 +98,15 @@ header {
 	margin-right: 5%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
+}
+
+.open,
+.btn-circle {
+	height: 40px;
+	padding: 10px;
+	margin: 0 5px;
+	font-weight: 800;
 }
 
 .open {
@@ -106,7 +115,6 @@ header {
 	color: #9b9fab;
 	border-radius: 100px;
 	overflow: none;
-	font-size: 1vw;
 }
 
 .btn-circle {
@@ -125,12 +133,26 @@ header {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
-	
+	font-weight: 600;
 }
 
 .tab--text {
-	margin-left: 5%;
 	font-size: 70%;
+}
+
+.tab--border {
+	margin-left: 30px;
+}
+
+.tab--border:hover {
+	border-bottom: 2px solid #63cbfa;
+	font-weight: 800;
+	transition: 0.5s;
+}
+
+#link-preview {
+	text-decoration: none;
+	color: #63cbfa;
 }
 /*==========Hamburger Section==========*/
 .open-slide {
@@ -186,8 +208,14 @@ ul {
 	padding-left: 10px;
 }
 
+.ul-label {
+	font-weight: 600;
+	padding-bottom: 15px;
+}
+
 li {
 	color: #98a3b5;
+	padding-bottom: 15px;
 }
 
 .nav-i {
@@ -202,28 +230,15 @@ li {
 	align-items: center;
 }
 
-h4 {
-}
-
-.main {
-
-}
-
-.admin {
-
-}
-
-.categories {
-
-}
-
 .profile-img {
 	height: 75px;
 	border-radius: 100%;
 }
 
-.check-please {
-	
+.profile,
+.main,
+.admin {
+	border-bottom: 2px solid #576577;
 }
 
 input[type="checkbox"]{
@@ -236,21 +251,21 @@ input[type="checkbox"]{
 
 input[type="checkbox"] + label:before{
 	border: 1px solid #333;
+	background: lightgray;
 	content: " ";
 	display: inline-block;
 	height: 16px;
-	padding: 0;
+	margin-right: 10px;
 	vertical-align: top;
 	width: 16px;
 }
 
 input[type="checkbox"]:checked + label:before {
-	background: yellow;
+	background: #00a5ff;
 	color: #333;
 	content: "\2713";
 	text-align: center;
 }
-
 /*===========Graphs Section===========*/
 .graphs {
 	background-color: #ecf2f6;
@@ -259,6 +274,7 @@ input[type="checkbox"]:checked + label:before {
 	display: grid;
 	grid-auto-columns: 50%;
 	grid-template-rows: 1fr 55px;
+	grid-auto-columns: auto;
 	grid-template-areas: 
 	"circle bars"
 	"divider divider";
@@ -266,10 +282,33 @@ input[type="checkbox"]:checked + label:before {
 
 .circle {
 	grid-area: circle;
+	margin: auto;
+}
+
+.svg-container {
+	display: flex;
+	align-items: center;
+	height: 300px;
+}
+
+.graph-circ {
+	width: 100%;
+}
+
+.graph-circ-label {
+	font-size: 4px;
+}
+
+.graph-circ-num {
+	font-size: 8px;
 }
 
 .bars {
 	grid-area: bars;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .graph-container {
@@ -281,9 +320,10 @@ input[type="checkbox"]:checked + label:before {
 }
 
 #bar-graph {
-	width: 80%;
-	height: 60%;
+	width: 450px;
+	height: 300px;
 	box-shadow: 1px 1px 5px 5px #6a7e97;
+	margin-bottom: 10px;
 }
 
 .graph-button {
@@ -307,8 +347,11 @@ input[type="checkbox"]:checked + label:before {
 span, .line-up {
 	display: inline-block;
 	vertical-align: middle;
-	border-radius: 100%;
 	border: 0;
+}
+
+.line-up {
+	border-radius: 100%;
 }
 
 .line-up:hover {
@@ -318,7 +361,7 @@ span, .line-up {
 }
 
 .outer-line {
-	width: 45%;
+	width: 46%;
 	border-bottom: 1px solid lightgrey;
 }
 /*===========Bottom Section===========*/
@@ -330,6 +373,7 @@ span, .line-up {
 table {
 	border-collapse: collapse;
 	margin: 30px;
+	background-color: white;
 }
 
 .t-title {
@@ -350,6 +394,7 @@ table {
 	color: white;
 	border: 0;
 	padding: 10px;
+	font-weight: 800;
 }
 
 .t-name,
@@ -368,9 +413,197 @@ table {
 .t-img {
 	border-radius: 100%;
 	width: 50px;
+	margin-right: 15px;
+}
+
+#front-and-center {
+	display: flex;
+	/*justify-content: center;*/
+	align-items: center;
+}
+
+#show-me-the-money {
+	font-weight: 800;
 }
 /*==========Footer Section============*/
 footer {
 	background-color: #ecf2f6;
 	grid-area: footer;
+	padding: 30px;
 }
+
+.button-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-btn {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	color: white;
+	font-weight: 600;
+}
+
+.fa-facebook,
+.fa-linkedin {
+	position: relative;
+	right: 20px;
+}
+
+.fa-twitter {
+	position: relative;
+	right: 30px;
+}
+
+#Facebook {
+	background-color: #436fc8;
+}
+
+#Twitter {
+	background-color: #00aaf7;
+}
+
+#Linkedin {
+	background-color: #0080c1;
+}
+
+h2 {
+	color: #696f7f;
+}
+
+.social-txt {
+	color: #a8adb7;
+}
+
+.link-group {
+	height: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.link-box {
+	height: 100%;
+	width: 80%;
+}
+
+.link-email {
+	width: 100%;
+	height: 30px;
+}
+
+.copy {
+	background-color: #00bec5;
+	color: white;
+	height: 100%;
+	width: 20%;
+	padding: 10px;
+	line-height: 10px;
+	font-size: 1vw;
+}
+
+#script {
+	background-color: white;
+	padding: 10px;
+	font-size: 1vw;
+	border: .25px solid lightgray;
+	height: 10px;
+	width: 80%;
+	display: inline-block;
+	/*overflow: hidden;*/
+}
+
+.social-hr {
+	margin: 30px 0;
+}
+/*###########--MEDIA Queries--#############*/
+@media screen and (max-width: 811px) {
+
+	.container {
+		grid-auto-columns:  100%;
+		grid-auto-rows: auto;
+		grid-template-areas: 
+		"header header header"
+		"graphs graphs graphs"
+		"bottom bottom bottom"
+		"footer footer footer";
+	}
+	
+	.header-bottom {
+		grid-template-areas: 
+		"Big-txt Big-txt"
+		"Buttons Buttons"
+		"tabs tabs";
+	}
+
+	.buttons {
+		justify-content: flex-start;
+		margin: 0 10px 15px 20px;
+	}
+
+	.graphs {
+		grid-template-rows: 200px 250px 50px;
+		grid-row-gap: 15px;
+		grid-template-areas:
+		"circle circle"
+		"bars bars"
+		"divider divider";
+	}
+
+	.svg-container {
+		height: 100px;
+	}
+
+	.graph-circ {
+		padding: 10%;
+	}
+
+	.graph-container,
+	#bar-graph {
+		margin: 0;
+	}
+
+	#bar-graph {
+		width: 320px;
+		height: 200px;
+		margin-bottom: 10px;
+	}
+
+	.copy,
+	#script {
+		font-size: 2vw;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.graph-circ {
+		padding: 4%;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.head-text,
+	.buttons,
+	.tab--border {
+		margin: 10px;
+	}
+
+	#bar-graph {
+		width: 80%;
+		height: 160px;
+	}
+
+	.outer-line {
+		width: 35%;
+	}
+
+	table {
+		margin: 5px;
+		font-size: 70%;
+	}
+}
+
